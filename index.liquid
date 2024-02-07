@@ -1,0 +1,79 @@
+---
+title:
+layout: layouts/main.liquid
+---
+<main id="page-home">
+  <div class="card">
+    <section id="projects">
+      <h2 class="no-top-margin">Projects</h2>
+      <ul>
+        {%- for project in projects -%}
+          <li>
+            <i>
+              <a href="{{ project.url }}">{{ project.title }}</a>
+              {% if project.year %} ({{ project.year }}) {% endif %}
+            </i>
+            &mdash;
+            <span>{{ project.description }}</span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  </div>
+
+  <div class="card posts-and-tags">
+    <section id="posts">
+      <h2 class="no-top-margin">Posts</h2>
+      &nbsp;
+      <span><a href="/feed.xml">RSS</a></span>
+      {% if collections.posts %}
+        <ul>
+          {%- for post in collections.posts reversed -%}
+            <li>
+              {%- if post.data.date %}{{ post.date | locale_date }}&nbsp;{% endif -%}
+              <a href="{{ post.page.url }}">
+                {{- post.data.title -}}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {% endif %}
+    </section>
+
+    {% comment %} TODO: Add JS to make tags work {% endcomment %}
+    <section id="tags">
+      <h2 class="no-top-margin">Tags</h2>
+      <ul>
+        {% assign ignore_collections = 'all,posts' | split: ',' %}
+        {%- for collection in collections -%}
+          {% unless ignore_collections contains collection[0] %}
+            <li>
+              <input type="checkbox" id="tags_checkbox_{{ collection[0] }}">
+              <label for="tags_checkbox_{{ collection[0] }}">#{{ collection[0] }}</label>
+            </li>
+          {% endunless %}
+        {%- endfor -%}
+      </ul>
+    </section>
+  </div>
+
+  <div class="card">
+    <section id="cool">
+      <h2 class="no-top-margin">Word of digital mouth</h2>
+      <p>Try something new!</p>
+      <ul>
+        {%- for category in recommendations -%}
+          <li>
+            <a href="#">{{ category[0] | capitalize }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  </div>
+
+  <div class="card">
+    <section id="latest-photo">
+      <h2 class="no-margin">Latest photo</h2>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,22 @@
+{
+  "name": "eleventy-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "11ty": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@shopify/prettier-plugin-liquid": "^1.4.1",
+    "html-minifier": "^4.0.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.70.0"
+  }
+}

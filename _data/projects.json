@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Today in the UK",
+    "year": 2023,
+    "description": "Daily-generated site showing recently-updated parliamentary bills alongside the top headlines from a selection of UK news organisations.",
+    "url": "https://todayinthe.uk"
+  },
+  {
+    "title": "patter.lol",
+    "year": 2023,
+    "description": "Stateless, peer-to-peer chat with random people.",
+    "url": "https://patter.lol"
+  },
+  {
+    "title": "Security analysis of nRF52 and CC254x chips",
+    "year": "2021-2022",
+    "description": "Replicating stacksmashing and LimitedResults' work to bypass the nRF52832 code readout protection and attempting the same for the CC2541 (unsuccessfully).",
+    "url": ""
+  }
+]

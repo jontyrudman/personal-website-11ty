@@ -1,0 +1,15 @@
+<header>
+  <h1>~jnthn</h1>
+
+  <nav>
+    <ul>
+      {% for item in nav %}
+        <li>
+          <a href="{{ item.path }}" class="{% if item.path == page.url %}nav-current-page-link{% endif %}">
+            {{- item.title -}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
