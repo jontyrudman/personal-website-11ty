@@ -1,7 +1,9 @@
 +++
 title: First post (from my phone!)
 date: Last Modified
-tags: microblog
+tags:
+  - post
+  - microblog
 +++
 
 Hello! 👋
