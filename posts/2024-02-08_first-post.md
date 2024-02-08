@@ -1,0 +1,10 @@
++++
+title: First post (from my phone!)
+date: Last Modified
+tags: microblog
++++
+
+Hello! 👋
+
+This is my first post on my phone, hopefully it turns out okay.
+I’m messing around with Working Copy on iOS and it’s not so bad for writing posts on here so far.
