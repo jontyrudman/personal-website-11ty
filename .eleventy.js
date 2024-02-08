@@ -14,9 +14,8 @@ function fixCircularReferences() {
 }
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addTemplateFormats("scss");
-
   // Compile SCSS
+  eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css", // optional, default: "html"
 
@@ -35,6 +34,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("posts/*.md");
   });
+
+  // Passthrough assets
+  eleventyConfig.addPassthroughCopy("assets/**/*");
 
   // json filter without circular ref issues
   eleventyConfig.addFilter("json", (val) =>
