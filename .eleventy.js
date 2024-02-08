@@ -1,4 +1,4 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const rssPlugin = require("@11ty/eleventy-plugin-rss");
 const sass = require("sass");
 const htmlmin = require("html-minifier");
 
@@ -16,7 +16,7 @@ function fixCircularReferences() {
 module.exports = (eleventyConfig) => {
   eleventyConfig.addTemplateFormats("scss");
 
-  // Creates the extension for use
+  // Compile SCSS
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css", // optional, default: "html"
 
@@ -31,21 +31,23 @@ module.exports = (eleventyConfig) => {
     },
   });
 
-  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
-
+  // Register posts
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("posts/*.md");
   });
 
+  // json filter without circular ref issues
   eleventyConfig.addFilter("json", (val) =>
     JSON.stringify(val, fixCircularReferences(), 2),
   );
+  // locale date string filter
   eleventyConfig.addFilter("locale_date", (date) => date.toLocaleDateString());
 
-  eleventyConfig.addPlugin(pluginRss);
+  // RSS feed generation
+  eleventyConfig.addPlugin(rssPlugin);
 
+  // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content) {
-    // Prior to Eleventy 2.0: use this.outputPath instead
     if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,

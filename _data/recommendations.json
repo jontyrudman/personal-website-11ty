@@ -1,11 +1,36 @@
 {
-  "ideas": [],
-  "music": [],
-  "technologies": [],
+  "ideas": [
+    {
+      "title": "File Life",
+      "url": "https://filelife.tours/",
+      "notes": "the file man picks up files around the world"
+    },
+    {
+      "title": "Digital Gardens (Nathan's Notes)",
+      "url": "https://nathancheng.fyi/02-Evergreen/Digital+gardens",
+      "notes": "and many more thoughts"
+    }
+  ],
+  "music": [
+    {
+      "title": "Windswept Adan by Ichiko Aoba",
+      "url": "https://ichikoaoba.bandcamp.com/album/windswept-adan"
+    },
+    {
+      "title": "yoyo by A Beacon School",
+      "url": "https://abeaconschool.bandcamp.com/album/yoyo"
+    }
+  ],
   "websites": [
     {
       "title": "Fabien Sanglard",
-      "url": "https://fabiensanglard.net/"
+      "url": "https://fabiensanglard.net/",
+      "notes": "reverse engineers games sometimes"
+    },
+    {
+      "title": "Marginalia Search",
+      "url": "https://search.marginalia.nu/",
+      "notes": "my favourite small web search engine"
     }
   ]
 }

@@ -15,6 +15,6 @@
     "title": "Security analysis of nRF52 and CC254x chips",
     "year": "2021-2022",
     "description": "Replicating stacksmashing and LimitedResults' work to bypass the nRF52832 code readout protection and attempting the same for the CC2541 (unsuccessfully).",
-    "url": ""
+    "url": "https://media.githubusercontent.com/media/jontyrudman/voltage-glitch-nrf52-cc254x-paper/master/report/report.pdf"
   }
 ]

@@ -1,6 +1,5 @@
 ---
 title: Test post
-tags: test
 layout: layouts/main.liquid
 date: Last Modified
 ---
