@@ -41,7 +41,7 @@ layout: layouts/main.liquid
     <span><a href="/feed.xml">RSS</a></span>
     <div class="row-left-fill">
       <div>
-        {% if collections.posts %}
+        {% if collections.posts != empty %}
           <ul>
             {%- for post in collections.posts reversed -%}
               <li>
