@@ -116,7 +116,13 @@ header {
 }
 
 footer {
-  padding: 1rem;
+  .footer-content {
+    padding: 1rem;
+    align-items: center;
+
+    max-width: $max-content-width;
+    margin: auto;
+  }
 }
 
 
