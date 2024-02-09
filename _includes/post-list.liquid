@@ -7,11 +7,21 @@
       {% if collections.posts != empty %}
         <ul>
           {%- for post in collections.posts reversed -%}
-           <li>
-             {%- if post.date %}<span class="iso-to-locale-date">{{ post.date | iso_date }}</span>&nbsp;{% endif -%}
-              <a href="{{ post.page.url }}">
-                {{- post.data.title -}}
-              </a>
+            <li>
+              {%- if post.date -%}
+                <span class="iso-to-locale-date">{{ post.date | iso_date }}</span>
+              {%- endif -%}
+              {% if post.page.url == page.url %}
+                <b>
+                  <a href="{{ post.page.url }}">
+                    {{- post.data.title -}}
+                  </a>
+                </b>
+              {% else %}
+                <a href="{{ post.page.url }}">
+                  {{- post.data.title -}}
+                </a>
+              {% endif %}
               {% for tag in post.data.tags %}
                 <span class="minor-text">#{{ tag }}</span>
               {% endfor %}
