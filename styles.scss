@@ -6,6 +6,7 @@
 
 $small-device-width: 950px;
 $max-content-width: 1200px;
+$max-post-width: 700px;
 
 * {
   font-family: monospace;
@@ -126,18 +127,23 @@ footer {
 }
 
 
+section.post-list {
+  h2 {
+    display: inline;
+  }
+}
+
+
 // HOME //
 main#page-home {
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "projects wodm"
-    "posts posts";
+    "wodm posts";
   grid-template-columns: 1fr 1fr;
 
   @media (width < $small-device-width) {
     grid-template-areas:
-      "projects"
       "wodm"
       "posts";
     grid-template-columns: 1fr;
@@ -147,16 +153,12 @@ main#page-home {
     grid-area: projects;
   }
 
-  section#wodm {
+  section.wodm {
     grid-area: wodm;
   }
 
-  section#posts {
+  section.post-list {
     grid-area: posts;
-
-    h2 {
-      display: inline;
-    }
   }
 }
 
@@ -167,5 +169,16 @@ main#page-about {
     .row-equal {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+
+main#post {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: $max-post-width 1fr;
+
+  @media(width < $small-device-width) {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,20 @@
+{% comment %} TODO: Use linkding API and have a page for my shared bookmarks {% endcomment %}
+<section class="wodm card">
+  <h2 class="no-margin">Word of digital mouth</h2>
+  <div class="minor-text">Find a new thing!</div>
+  {% for category in recommendations %}
+    <h3>{{ category[0] | capitalize }}</h3>
+    <ul>
+      {%- for r in category[1] -%}
+        <li>
+          <a target="_blank" rel="noopener noreferrer" href="{{ r.url }}">{{ r.title }}</a>
+          {% if r.notes %}
+            <span class="minor-text">
+              {{ r.notes }}
+            </span>
+          {% endif %}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {% endfor %}
+</section>
