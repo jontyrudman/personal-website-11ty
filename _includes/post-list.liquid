@@ -7,8 +7,8 @@
       {% if collections.posts != empty %}
         <ul>
           {%- for post in collections.posts reversed -%}
-            <li>
-              {%- if post.data.date %}{{ post.date | locale_date }}&nbsp;{% endif -%}
+           <li>
+             {%- if post.date %}<span class="iso-to-locale-date">{{ post.date | iso_date }}</span>&nbsp;{% endif -%}
               <a href="{{ post.page.url }}">
                 {{- post.data.title -}}
               </a>

@@ -20,3 +20,13 @@
     {% include 'footer' %}
   </body>
 </html>
+
+{% comment %} Convert post dates from ISO to locale date string {% endcomment %}
+<script>
+  const dateSpans = document.querySelectorAll(".iso-to-locale-date");
+  for (let i = 0; i < dateSpans.length; i++) {
+    dateSpans[i].innerHTML = new Date(dateSpans[i].innerHTML).toLocaleDateString();
+    dateSpans[i].classList.remove("iso-to-locale-date");
+    dateSpans[i].classList.add("locale-date");
+  }
+</script>

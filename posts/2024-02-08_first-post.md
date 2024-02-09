@@ -1,7 +1,8 @@
 ---
 title: First post (from my phone!)
+date: 2024-02-08
 tags:
-  - microblog
+  - short
 ---
 
 Hello! 👋
