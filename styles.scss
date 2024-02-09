@@ -82,6 +82,41 @@ a {
   }
 }
 
+button {
+  margin: 0;
+  appearance: none;
+  font-size: inherit;
+  color: var(--minor-text-color);
+  border: 1px solid var(--minor-text-color);
+  background-color: var(--background-color);
+  filter: drop-shadow(2px 2px 0 var(--minor-text-color));
+
+  &:hover {
+    cursor: pointer;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    filter: drop-shadow(2px 2px 0 var(--text-color));
+  }
+
+  &:active {
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    filter: drop-shadow(1px 1px 0 var(--text-color));
+  }
+}
+
+.collapsible[data-expanded="0"] {
+  display: none;
+  height: 0;
+}
+
+.collapsible[data-expanded="1"] {
+  display: inherit;
+  height: auto;
+}
+
 #content {
   padding: 0 1rem;
   max-width: $max-content-width;
@@ -91,7 +126,7 @@ a {
 .card {
   border: 1px solid var(--text-color);
   padding: 1rem;
-  filter: drop-shadow(5px 5px 0 black);
+  filter: drop-shadow(5px 5px 0 var(--text-color));
   background-color: var(--card-background-color);
   margin-right: 5px;
   margin-bottom: 5px;
@@ -185,23 +220,46 @@ main#page-home {
     "wodm posts";
   grid-template-columns: 1fr 1fr;
 
-  @media (width < $small-device-width) {
-    grid-template-areas:
-      "wodm"
-      "posts";
-    grid-template-columns: 1fr;
-  }
-
   section#projects {
     grid-area: projects;
   }
 
   section.wodm {
     grid-area: wodm;
+
+    .wodm-header {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    #wodm-expand-btn {
+      display: none;
+
+      @media (width < $small-device-width) {
+        display: inherit;
+      }
+    }
+
+    #wodm-collapsible {
+      @media (width > $small-device-width) {
+        display: inherit;
+        height: auto;
+      }
+    }
   }
 
   section.post-list {
     grid-area: posts;
+  }
+
+  @media (width < $small-device-width) {
+    grid-template-areas:
+      "wodm"
+      "posts";
+    grid-template-columns: 1fr;
   }
 }
 

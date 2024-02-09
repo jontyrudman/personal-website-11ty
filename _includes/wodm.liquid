@@ -1,20 +1,38 @@
+<script>
+  function wodmExpand(event) {
+    const collapsibleElem = document.querySelector('#wodm-collapsible');
+    if (collapsibleElem.dataset.expanded === '0') {
+      collapsibleElem.dataset.expanded = '1';
+      event.target.innerHTML = 'Collapse';
+    } else {
+      collapsibleElem.dataset.expanded = '0';
+      event.target.innerHTML = 'Expand';
+    }
+  }
+</script>
+
 {% comment %} TODO: Use linkding API and have a page for my shared bookmarks {% endcomment %}
 <section class="wodm card">
   <h2 class="no-margin">Word of digital mouth</h2>
-  <div class="minor-text">Find a new thing!</div>
-  {% for category in recommendations %}
-    <h3>{{ category[0] | capitalize }}</h3>
-    <ul>
-      {%- for r in category[1] -%}
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href="{{ r.url }}">{{ r.title }}</a>
-          {% if r.notes %}
-            <span class="minor-text">
-              {{ r.notes }}
-            </span>
-          {% endif %}
-        </li>
-      {%- endfor -%}
-    </ul>
-  {% endfor %}
+  <div class="wodm-header">
+    <div class="minor-text">Find a new thing!</div>
+    <button onclick="wodmExpand(event)" id="wodm-expand-btn">Expand</button>
+  </div>
+  <div id="wodm-collapsible" class="collapsible" data-expanded="0">
+    {% for category in recommendations %}
+      <h3>{{ category[0] | capitalize }}</h3>
+      <ul>
+        {%- for r in category[1] -%}
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="{{ r.url }}">{{ r.title }}</a>
+            {% if r.notes %}
+              <span class="minor-text">
+                {{ r.notes }}
+              </span>
+            {% endif %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {% endfor %}
+  </div>
 </section>
