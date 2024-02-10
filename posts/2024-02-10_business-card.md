@@ -7,7 +7,7 @@ I was reminded while making a [little contact page](/card/) this morning of the 
 It's one of my favourite things because of a particular feeling I associate with it: it was so easy to set up and carries maximum cool-factor (if not that cool, admit it's nifty).
 It looks a bit like this:
 
-![the NFC business card on the street](assets/posts/2024-02-10_business-card.webp)
+![the NFC business card on the street](/assets/posts/2024-02-10_business-card.webp)
 
 ## How it works
 
