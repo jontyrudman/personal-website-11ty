@@ -4,6 +4,10 @@
     "path": "/"
   },
   {
+    "title": "projects",
+    "path": "/projects/"
+  },
+  {
     "title": "about",
     "path": "/about/"
   }

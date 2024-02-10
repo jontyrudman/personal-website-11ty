@@ -1,0 +1,17 @@
+---
+layout: layouts/main.liquid
+---
+<main id="post">
+  <div class="card">
+    {% if page.date %}
+      <h2 class="no-margin">{{ title }}</h2>
+      <p class="minor-text no-top-margin iso-to-locale-date">{{ page.date | iso_date }}</p>
+    {% else %}
+      <h1 class="no-top-margin">{{ title }}</h1>
+    {% endif %}
+
+    {{ content }}
+  </div>
+
+  {% include 'post-list' %}
+</main>

@@ -43,7 +43,7 @@ module.exports = (eleventyConfig) => {
     JSON.stringify(val, fixCircularReferences(), 2),
   );
   // locale date string filter
-  eleventyConfig.addFilter("locale_date", (date) => date.toLocaleDateString());
+  eleventyConfig.addFilter("iso_date", (date) => date instanceof Date ? date.toISOString() : date);
 
   // RSS feed generation
   eleventyConfig.addPlugin(rssPlugin);

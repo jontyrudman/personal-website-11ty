@@ -1,0 +1,52 @@
+<section class="post-list card">
+  <h2 class="no-top-margin">Posts</h2>
+  &nbsp;
+  <span><a href="/feed.xml">RSS</a></span>
+  <div class="row-left-fill">
+    <div>
+      {% if collections.posts != empty %}
+        <ul>
+          {%- for post in collections.posts reversed -%}
+            <li>
+              {%- if post.date -%}
+                <span class="iso-to-locale-date">{{ post.date | iso_date }}</span>
+              {%- endif -%}
+              {% if post.page.url == page.url %}
+                <b>
+                  <a href="{{ post.page.url }}">
+                    {{- post.data.title -}}
+                  </a>
+                </b>
+              {% else %}
+                <a href="{{ post.page.url }}">
+                  {{- post.data.title -}}
+                </a>
+              {% endif %}
+              {% for tag in post.data.tags %}
+                <span class="minor-text">#{{ tag }}</span>
+              {% endfor %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {% else %}
+        <p>No posts right now, check back later :)</p>
+      {% endif %}
+    </div>
+
+    {% comment %} TODO: Add tag sorting if you actually end up with posts here {% endcomment %}
+    {% comment %} <div> {% endcomment %}
+    {% comment %}   <h3 class="no-top-margin">Tags</h3> {% endcomment %}
+    {% comment %}   <ul> {% endcomment %}
+    {% comment %}     {% assign ignore_collections = 'all,posts' | split: ',' %} {% endcomment %}
+    {% comment %}     {%- for collection in collections -%} {% endcomment %}
+    {% comment %}       {% unless ignore_collections contains collection[0] %} {% endcomment %}
+    {% comment %}         <li> {% endcomment %}
+    {% comment %}           <input type="checkbox" id="tags_checkbox_{{ collection[0] }}"> {% endcomment %}
+    {% comment %}           <label for="tags_checkbox_{{ collection[0] }}">#{{ collection[0] }}</label> {% endcomment %}
+    {% comment %}         </li> {% endcomment %}
+    {% comment %}       {% endunless %} {% endcomment %}
+    {% comment %}     {%- endfor -%} {% endcomment %}
+    {% comment %}   </ul> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
+  </div>
+</section>
