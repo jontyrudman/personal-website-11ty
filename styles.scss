@@ -291,4 +291,13 @@ main#post {
   @media (width < $small-device-width) {
     grid-template-columns: 1fr;
   }
+
+  img {
+    max-width: 100%;
+    border: 1px solid var(--text-color);
+    background-color: var(--background-color);
+    display: block;
+    margin: auto;
+    max-height: 300px;
+  }
 }

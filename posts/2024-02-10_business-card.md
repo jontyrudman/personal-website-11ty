@@ -4,6 +4,7 @@ date: 2024-02-11
 ---
 
 I was reminded while making a [little contact page](/card/) this morning of the NFC business card I've been carrying in my wallet for the last 6 months.
+
 It's one of my favourite things because of a particular feeling I associate with it: it was so easy to set up and carries maximum cool-factor (if not that cool, admit it's nifty).
 It looks a bit like this:
 
