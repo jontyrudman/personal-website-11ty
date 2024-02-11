@@ -1,6 +1,6 @@
 ---
 title: The (Not So Humble) Modern Business Card
-date: 2024-02-11
+date: 2024-02-10
 ---
 
 I was reminded while making a [little contact page](/card/) this morning of the NFC business card I've been carrying in my wallet for the last 6 months.
