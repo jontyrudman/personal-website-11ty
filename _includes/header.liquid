@@ -1,17 +1,13 @@
 <header>
   <div class="header-content">
-    <h1>~jnthn</h1>
+    <div class="site-name">~jnthn</div>
 
     <nav>
-      <ul>
-        {% for item in nav %}
-          <li>
-            <a href="{{ item.path }}" class="{% if item.path == page.url %}nav-current-page-link{% endif %}">
-              {{- item.title -}}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+      {% for item in nav %}
+        <a href="{{ item.path }}" class="{% if item.path == page.url %}nav-current-page-link{% endif %}">
+          {{- item.title -}}
+        </a>
+      {% endfor %}
     </nav>
   </div>
 </header>

@@ -1,5 +1,5 @@
 ---
-title: First post (from my phone!)
+title: First Post (From My Phone!)
 date: 2024-02-08
 tags:
   - short

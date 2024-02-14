@@ -185,7 +185,9 @@ header {
     margin: auto;
   }
 
-  h1 {
+  .site-name {
+    font-size: xx-large;
+    font-weight: bold;
     margin: 0;
   }
 
@@ -299,5 +301,37 @@ main#post {
     display: block;
     margin: auto;
     max-height: 300px;
+  }
+}
+
+main#gallery {
+  #gallery-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    justify-content: center;
+    align-items: baseline;
+
+    .gallery-card {
+      max-width: 333px;
+
+      img {
+        vertical-align: middle;
+        margin-bottom: 1rem;
+        width: 333px;
+      }
+    }
+
+    @media (width < $small-device-width) {
+      grid-template-columns: auto;
+
+      .gallery-card {
+        max-width: 250px;
+
+        img {
+          width: 250px;
+        }
+      }
+    }
   }
 }

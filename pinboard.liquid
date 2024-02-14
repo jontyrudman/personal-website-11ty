@@ -1,0 +1,106 @@
+---
+title: gallery
+layout: layouts/main.liquid
+---
+
+<script>
+  async function* makeTextFileLineIterator(fileURL) {
+    const utf8Decoder = new TextDecoder("utf-8");
+    const response = await fetch(fileURL);
+    const reader = response.body.getReader();
+    let { value: chunk, done: readerDone } = await reader.read();
+    chunk = chunk ? utf8Decoder.decode(chunk) : "";
+
+    const newline = /\r?\n/gm;
+    let startIndex = 0;
+    let result;
+
+    while (true) {
+      const result = newline.exec(chunk);
+      if (!result) {
+        if (readerDone) break;
+        const remainder = chunk.substr(startIndex);
+        ({ value: chunk, done: readerDone } = await reader.read());
+        chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+        startIndex = newline.lastIndex = 0;
+        continue;
+      }
+      yield chunk.substring(startIndex, result.index);
+      startIndex = newline.lastIndex;
+    }
+
+    if (startIndex < chunk.length) {
+      // Last line didn't end in a newline char
+      yield chunk.substr(startIndex);
+    }
+  }
+
+  async function getImageUrls() {
+    const imageUrls = [];
+    for await (const line of makeTextFileLineIterator("https://pn50.jnthn.me/gallery/output/gallery.csv")) {
+      const splitStr = line.split(",");
+      imageUrls.push({imgUrl: splitStr[0], descUrl: splitStr[1].length === 0 ? undefined : splitStr[1]});
+    }
+    return imageUrls;
+  }
+
+  async function renderImage(body, template, {imgUrl, descUrl}) {
+    const clone = template.content.cloneNode(true);
+    let img = clone.querySelector("img");
+    let link = clone.querySelector("a");
+    let desc = clone.querySelector("p");
+
+    link.setAttribute("href", imgUrl);
+    img.setAttribute("src", imgUrl);
+
+    if (descUrl !== undefined) {
+      fetch(descUrl).then((r) => {
+        r.text().then((t) => {
+          desc.innerHTML = t;
+        });
+      })
+    }
+
+    body.appendChild(clone);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const body = document.querySelector("#gallery-grid");
+    const template = document.querySelector("#image-card-template");
+
+    getImageUrls().then((urls) => {
+      if (urls.length > 0) {
+        document.querySelector("#nothing-here").remove();
+      }
+
+      // Sort filenames alphabetically desc to get newest first
+      urls.sort((a, b) => {
+        const filenameA = a.imgUrl.substring(a.imgUrl.lastIndexOf("/") + 1).toLowerCase();
+        const filenameB = b.imgUrl.substring(b.imgUrl.lastIndexOf("/") + 1).toLowerCase();
+        return (filenameA > filenameB) ? -1 : (filenameA < filenameB) ? 1 : 0;
+      });
+
+      urls.forEach(({imgUrl, descUrl}) => {
+        renderImage(body, template, {imgUrl, descUrl});
+      });
+    });
+  });
+</script>
+
+<main id="gallery">
+  <p id="nothing-here">
+    Nothing here yet.
+  </p>
+  <div id="gallery-grid">
+    <template id="image-card-template">
+      <div class="card gallery-card">
+        <div class="gallery-image">
+          <a>
+            <img />
+          </a>
+        </div>
+        <p class="no-margin">&nbsp;</p>
+      </div>
+    </template>
+  </div>
+</main>
