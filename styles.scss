@@ -285,6 +285,7 @@ main#post {
   display: grid;
   gap: 1rem;
   grid-template-columns: minmax(auto, $max-post-width) 1fr;
+  align-items: start;
 
   .post-list {
     min-width: 300px;
