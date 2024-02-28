@@ -15,11 +15,11 @@ Oops, as I wrote this it turned into a bit of a love letter to a particular even
 
 ### Start of the year
 
-A New Year's walk in 2016.
+A New Year's walk.
 
-A couple of photoshoots with my dad and a building site light in 2016.
+A couple of photoshoots with my dad and a building site light.
 
-Acting in a friend's school project in 2016 and having an awkward romantic encounter (all encounters were awkward back then).
+Acting in a friend's school project and having an awkward romantic encounter (*all encounters* were awkward back then).
 
 ### Berlin
 
@@ -32,7 +32,7 @@ It also featured a lot of photos of <b><i>L</i></b>, who I, incidentally, met on
 
 ### Naples and Amalfi
 
-Going to Naples and eating a very quickly-made (but wonderful) pizza at [Sorbillo](https://www.sorbillo.it/) in 2016.
+Going to Naples in the summer and eating a very quickly-made (but wonderful) pizza at [Sorbillo](https://www.sorbillo.it/).
 
 Walking through a valley of fragrant lemon groves in the heat on the Amalfi coast.
 
@@ -64,13 +64,13 @@ After the fire had died in the water I looked up and noticed someone was filming
 
 ### Walking with my dad
 
-Walking up Pen y Fan on a warm, cloudless day with my dad in April, 2017.
+Walking up Pen y Fan on a warm, cloudless day with my dad in April.
 
 <img src="/assets/posts/2024-02-27/penyfan.webp" />
 
 ### Venice
 
-Going to Venice in 2017 and taking my [first photo of a stranger](/pinboard) that wasn't just of their back.
+Going to Venice in the summer and taking my [first photo of a stranger](/pinboard) that wasn't just of their back.
 <span class="minor-text">
 There was a gorgeous pink light that frosted the clouds for what felt like hours that evening.
 </span>
@@ -83,17 +83,12 @@ Visiting Iceland was awesome.
 A story from my favourite day has been stuck in my head since, and is as follows.
 
 <p style="margin-left:30px;font-weight:bold">
-To say I was a bit of a sad kid back then would be an understatement, but walking out into the landscapes was incredibly cathartic.
-There was a particular evening I'll remember forever.
-</p>
-
-<p style="margin-left:30px;font-weight:bold">
 The coach pulled up at our bed and breakfast just as the sun was setting over a mainly flat landscape, featureless except for a few mountains.
 There was a gentle breeze but it was still warm enough in the sun to take off our coats in November.
 </p>
 
 <p style="margin-left:30px;font-weight:bold">
-Feeling the sun on my skin and seeing the sky painted in warmth, I felt so peaceful and carefree.
+Feeling the sun on my skin and seeing the sky painted with warmth, I felt so peaceful and carefree.
 Everyone who stepped off the coach seemed to have been moved by the same scene.
 Running out towards the sun, I took photos every few steps and felt the spongy moss beneath my feet compress at least an inch with every step.
 The ground was so inviting that I laid down in the moss for a few minutes.
