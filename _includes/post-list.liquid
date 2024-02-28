@@ -1,9 +1,8 @@
-<section class="post-list card">
-  <h2 class="no-top-margin">Posts</h2>
+<section class="post-list card no-padding">
+  <h2>Posts</h2>
   &nbsp;
   <span><a href="/feed.xml">RSS</a></span>
-  <div class="row-left-fill">
-    <div>
+  <div class="row-left-fill post-list-body">
       {% if collections.posts != empty %}
         <ul>
           {%- for post in collections.posts reversed -%}
@@ -48,5 +47,4 @@
     {% comment %}     {%- endfor -%} {% endcomment %}
     {% comment %}   </ul> {% endcomment %}
     {% comment %} </div> {% endcomment %}
-  </div>
 </section>
