@@ -10,6 +10,3 @@ Email me: <b>site<span style="display: none">null</span>[at]<span style="display
 - <a href="https://www.linkedin.com/in/jontyrudman/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 - <a href="https://github.com/jontyrudman" target="_blank" rel="noopener noreferrer">GitHub</a>
 - <a href="/projects/" target="_blank">Things I've made</a>
-
-
-[The rest of my website](/)
