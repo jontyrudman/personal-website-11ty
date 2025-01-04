@@ -3,6 +3,7 @@ title: gallery
 layout: layouts/main.liquid
 ---
 
+{% comment %}
 <script>
   async function* makeTextFileLineIterator(fileURL) {
     const utf8Decoder = new TextDecoder("utf-8");
@@ -86,8 +87,10 @@ layout: layouts/main.liquid
     });
   });
 </script>
+{% endcomment %}
 
 <main id="gallery">
+  {% comment %}
   <p id="nothing-here">
     Nothing here yet.
   </p>
@@ -102,5 +105,18 @@ layout: layouts/main.liquid
         <p class="no-margin">&nbsp;</p>
       </div>
     </template>
+  </div>
+  {% endcomment %}
+  <div id="gallery-grid">
+    {%- for image in pinboard reversed -%}
+      <div class="card gallery-card">
+        <div class="gallery-image">
+          <a>
+            <img src="{{ image.img }}" />
+          </a>
+        </div>
+        <p class="no-margin">{{ image.description }}</p>
+      </div>
+    {%- endfor -%}
   </div>
 </main>

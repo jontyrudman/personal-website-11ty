@@ -1,0 +1,8 @@
+20170724.webp filter=lfs diff=lfs merge=lfs -text
+20210819.webp filter=lfs diff=lfs merge=lfs -text
+20220226.webp filter=lfs diff=lfs merge=lfs -text
+20220611.webp filter=lfs diff=lfs merge=lfs -text
+20230402.webp filter=lfs diff=lfs merge=lfs -text
+20230520.webp filter=lfs diff=lfs merge=lfs -text
+20230529.webp filter=lfs diff=lfs merge=lfs -text
+20170724_from_rialto.webp filter=lfs diff=lfs merge=lfs -text
