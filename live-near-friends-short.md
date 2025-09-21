@@ -17,13 +17,13 @@ h1, h2, h3, h4 {
 
 # Jonathan's "live near your friends" manifesto
 
-You're receiving this because I enjoy spending time with you.
+You're receiving this because I enjoy spending time with you!
 
 The pitch is this: let's move to Birmingham by ~2033 and live within a 30-60 minute walk (8-15 min cycle, 20 min bus) from each other.
 
 ## Why
 
-I like spending time with you and I hope you like spending time with me!
+Life is better when you can easily spend more time with friends.
 Even if you're busy, or work long or weird hours, if it's easy to hang out we'll be more likely to do it.
 
 Birmingham is pretty affordable!
