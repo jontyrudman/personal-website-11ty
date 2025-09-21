@@ -23,7 +23,7 @@ The pitch is this: let's move to Birmingham in our early 30s and live within a 3
 
 ## My motivations
 
-I don't know for certain what your favourite things in life are, or your goals, but here are mine:
+I don't know for certain what your favourite things in life are, or your goals, but here are my goals:
 
 - Maximise time with people I love and appreciate, and vice versa.
 - Be able to afford to live in a place I don't hate. Usually I quite like places where my friends are and that are easy to get to. A bit of nature, a bit of convenience.
@@ -31,8 +31,8 @@ I don't know for certain what your favourite things in life are, or your goals, 
 
 ## Why live near friends?
 
-It's a way of achieving my **maximise time with friends** motivation.
-Even if you're busy, or work long or weird hours, if it's easy to hang out you'll be more likely to do it.
+I like spending time with you and I hope you like spending time with me!
+Even if you're busy, or work long or weird hours, if it's easy to hang out we'll be more likely to do it.
 Let's make it as easy as possible, with a short walk and a doorbell ring after work, or a walk to the same pub.
 
 The thing that brought the most joy at university, no matter what was going on, was being able to see friends and having space to have a party.
