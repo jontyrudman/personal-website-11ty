@@ -83,7 +83,7 @@ Could also do Bearwood or Harborne, but they miss out on the rail connection, wh
 I'll settle for interested &mdash; I think this could be really good!
 It doesn't have to be soon, but please keep it in mind over the next few years.
 
-If you're interested at all, let me know and I can put your name on here so our other friends that I've shared this with know.
+If you're interested at all, let me know and I will add your name to the blood pledge book.
 
 ### Supporting docs
 
